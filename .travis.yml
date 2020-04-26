@@ -16,7 +16,7 @@ install:
 - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 before_install:
 - chmod +x mvnw 
-- psql -c 'create database db02fbkv8ge7t4;' -U postgres
+- psql -c 'create database df32nchsi9kkmp;' -U postgres
 - sudo apt-get update
 - sudo apt-get install dbus-x11
 - export DISPLAY=:99.0

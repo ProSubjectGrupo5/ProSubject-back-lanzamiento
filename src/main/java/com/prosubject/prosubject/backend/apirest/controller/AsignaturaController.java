@@ -20,7 +20,7 @@ import com.prosubject.prosubject.backend.apirest.service.AsignaturaService;
 
 @RestController
 @RequestMapping("/api/asignaturas")
-@CrossOrigin(origins = {"http://localhost:4200", "https://prosubject-v3.herokuapp.com"})
+@CrossOrigin(origins = {"http://localhost:4200", "https://prosubject-lanzamiento.herokuapp.com"})
 public class AsignaturaController {
 
 	

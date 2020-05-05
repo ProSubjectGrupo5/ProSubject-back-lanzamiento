@@ -39,6 +39,16 @@ public class CarritoService {
 //		return alum;
 //	}
 	
+	public static double redondearDecimales(double valorInicial, int numeroDecimales) {
+        double parteEntera, resultado;
+        resultado = valorInicial;
+        parteEntera = Math.floor(resultado);
+        resultado=(resultado-parteEntera)*Math.pow(10, numeroDecimales);
+        resultado=Math.round(resultado);
+        resultado=(resultado/Math.pow(10, numeroDecimales))+parteEntera;
+        return resultado;
+    }
+	
 	public Carrito precioMensualHorarios(Long alumnoId) {
 		Double precioHorario = this.carritoRepository.precioMensualHorarios(alumnoId);
 		Integer mensual = 4;
@@ -51,7 +61,8 @@ public class CarritoService {
 		if(alum.getContadorDescuento()>4) {
 			Double precio = c.getPrecioMensual();
 			Double descuento = precio*0.9;
-			c.setPrecioMensual(descuento);
+			c.setPrecioMensual(redondearDecimales(descuento, 2));
+			//c.setPrecioMensual((double)Math.round(number*100)/100);
 		}
 		return c;
 	}

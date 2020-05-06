@@ -17,7 +17,9 @@ install:
 before_install:
 - chmod +x mvnw 
 - psql -c 'create database d84fcuj7llju5i;' -U postgres
+- sudo apt update
 - sudo apt-get update
+- sudo apt-get upgrade
 - sudo apt-get install dbus-x11
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start

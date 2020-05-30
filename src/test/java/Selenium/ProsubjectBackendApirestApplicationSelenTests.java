@@ -1,4 +1,4 @@
-package com.prosubject.prosubject.backend.apirest;
+package Selenium;
 
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
